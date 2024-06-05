@@ -11,6 +11,11 @@ function controller($matcheUri, $params){
         throw new Exception("Method {$method} não existe no controller {$controller}");
     }
 
-    return $controllerInstace->$method($params);
+    $controller = $controllerInstace->$method($params);
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        die();
+    }
+
+    return $controller;
 }
 ?>

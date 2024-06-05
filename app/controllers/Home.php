@@ -26,12 +26,6 @@ class Home{
             'data' => ['title' => 'Contato']
         ];
     }
-    public function login($params){
-        return[
-            'view' => 'login.php',
-            'data' => ['title' => 'login']
-        ];
-    }
     public function generateOrder($params){
         return[
             'view' => 'generateOrder.php',

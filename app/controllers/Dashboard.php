@@ -17,37 +17,31 @@ class Dashboard{
     public function products($params){
         return[
             'view' => 'dashboard/products.php',
-            'data' => ['title' => 'Produto']
+            'data' => ['title' => 'Produtos']
         ];
     }
     public function paidOrders($params){
         return[
             'view' => 'dashboard/paidOrders.php',
-            'data' => ['title' => 'Pedidos']
+            'data' => ['title' => 'Pedidos Pagos']
         ];
     }
     public function pendingOrders($params){
         return[
             'view' => 'dashboard/pendingOrders.php',
-            'data' => ['title' => 'Pedidos']
+            'data' => ['title' => 'Pedidos Pendentes']
         ];
     }
     public function completedOrders($params){
         return[
             'view' => 'dashboard/completedOrders.php',
-            'data' => ['title' => 'Pedidos']
+            'data' => ['title' => 'Pedidos Concluidos']
         ];
     }
     public function clients($params){
         return[
             'view' => 'dashboard/clients.php',
             'data' => ['title' => 'Clientes']
-        ];
-    }
-    public function users($params){
-        return[
-            'view' => 'dashboard/users.php',
-            'data' => ['title' => 'Usuarios']
         ];
     }
     public function selfConfig($params){

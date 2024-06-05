@@ -53,12 +53,31 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Peço</th>
-                    <th scope="col">Tipo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Nivel</th>
                     <th scope="col" class="text-center">Ações</th>
                 </tr>
             </thead>
             <tbody class="table-body">
+                <?php foreach($users as $user){?>
+                <tr>
+                    <th scope="row"><?=$user->id?></th>
+                    <td><?=$user->name?></td>
+                    <td><?=$user->email?></td>
+                    <td>
+                        <?php 
+                            if($user->type_account == 1){
+                                echo 'Admin';
+                            } else if($user->type_account == 2){
+                                echo 'Standard';
+                            }
+                        ?>
+                    </td>
+                    <td class="text-center">
+                        <a href='editUser/<?=$user->id?>' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Usuario'><i class='fa-solid fa-pen-to-square'></i></a>
+                    </td>
+                <tr>
+                <?php }?>
             </tbody>
         </table>
     </div>
