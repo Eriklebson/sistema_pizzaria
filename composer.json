@@ -1,0 +1,27 @@
+{
+    "name": "erikl/sistema_pizzaria",
+    "description": "Sistema para Pizzarias",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Erikl\\SistemaPizzaria\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eriklebson Martins De Paiva",
+            "email": "eriklebson2016@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": [
+            "app/helpers/constants.php",
+            "app/router/router.php",
+            "app/core/controller.php"
+        ],
+        "psr-4": {
+            "app\\":"app"
+        }
+    }
+}

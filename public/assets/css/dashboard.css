@@ -1,0 +1,81 @@
+:root{
+    --body-bg: #f0f0f0;
+    --menu-bg: white;
+    --menu-color: black;
+    --back-bg: white;
+    --itens-bg: #f8f9fa;
+}
+.dark-mode:root{
+    --body-bg: #141b1f;
+    --menu-bg: #1f252b;
+    --menu-color: white;
+    --back-bg: #212529;
+    --itens-bg: #1b2025;
+}
+*{
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F0F0F0;
+}
+.active{
+    color: #fff;
+    background-color: #0d6efd;
+}
+body{
+    background-color: var(--body-bg) !important;
+}
+.menu-dashboar{
+    color: var(--menu-color) !important;
+    background-color: var(--menu-bg) !important;
+}
+.menu-dashboar a{
+    color: var(--menu-color) !important;
+}
+.menu-dashboar a:hover{
+    color: black !important;
+    background-color: #f8f9fa;
+}
+.fs-0{
+    font-size: 100px;
+}
+.back i{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--back-bg);
+    border-radius: 3px;
+}
+.back i:hover{
+    box-shadow: rgba(0, 110, 255, 0.24) 0px 3px 8px;
+    background-color: #f8f9fa;
+    transition: 0.5s;
+}
+.item, .card{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.item:hover{
+    box-shadow: rgba(0, 110, 255, 0.24) 0px 3px 8px;
+    background-color: var(--itens-bg);
+    transition: 0.5s;
+}
+
+.row a{
+    text-decoration: none;
+}
+.card-imgs img{
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+.menu{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.container-fluid{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}

@@ -1,0 +1,127 @@
+*{
+    font-family: Poppins, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('/assets/img/bg_4.jpg');
+    background-attachment: fixed;
+}
+.menu-horizontal{
+    position: absolute;
+    color: white;
+    background-color: #121618;
+    transition: 1s;
+    z-index: 3;
+}
+nav a{
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+nav a:hover{
+    color: #F3C55D;
+    transition: 0.5s;
+}
+.active{
+    color: #F3C55D !important;
+}
+.banner{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('/assets/img/bg_3.jpg');
+    color: white;
+    padding: 250px 0px;
+}
+.black-text{
+    color: #808080;
+}
+.title{
+    font-size: 30px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: "Josefin Sans", Arial, sans-serif;
+}
+.img-welcome{
+    background-image: url('/assets/img/about.jpg');
+    background-position: center;
+}
+.services{
+    background-image: url('/assets/img/food.png');
+}
+.icon{
+    font-size: 100px;
+}
+.add-cart{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.add-cart:hover{
+    color: black;
+    background-color: #F3C55D;
+    border: 1px solid #F3C55D;
+    transition: 0.5s;
+}
+.count-cart{
+    font-size: 10px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 10px;
+    background-color: orange;
+    border-radius: 50px;
+    padding: 0px 6px;
+}
+
+.contact-form{
+    border: transparent !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    height: 58px !important;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 13px;
+    border-radius: 0px;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important
+}
+textarea.contact-form {
+    height: inherit !important;
+}
+.contact-form::placeholder {
+    color: white !important;
+}
+.send-contact{
+    padding:  10px 30px;
+    border: 1px solid #F3C55D;
+    background-color: #F3C55D;
+}
+.send-contact:hover{
+    background-color: transparent;
+    color: #F3C55D;
+    transition: 0.5s;
+}
+footer{
+    color: white;
+    background-color: #121618;
+}
+.mobile{
+    display: none;
+}
+.desktop{
+    display: flex;
+}
+.vh-auto{
+    height: 90.9vh;
+}
+@media (max-width: 900px){
+    .desktop{
+        display: none !important;
+    }
+    .mobile{
+        display: block;
+    }
+}
