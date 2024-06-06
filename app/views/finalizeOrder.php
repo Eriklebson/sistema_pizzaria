@@ -6,7 +6,7 @@
                 <input type="text" class="form-control contact-form" placeholder="Nome*">
             </div>
             <div class="col-md-6">
-                <input type="text" id="tel" class="form-control contact-form" placeholder="Celular*">
+                <input type="text" id="phone" class="form-control contact-form" placeholder="Celular*">
             </div>
         </div>
         <input type="text" class="form-control mb-3 contact-form" placeholder="Email*">

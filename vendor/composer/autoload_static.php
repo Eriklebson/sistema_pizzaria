@@ -12,15 +12,21 @@ class ComposerStaticInitd35f14259a2d1d5d7dcf3eceadec9f20
         'b95d41c51cea373e42fdab7c0ae15e0f' => __DIR__ . '/../..' . '/app/core/controller.php',
         '00e7ad15644ececae3594a86501bf5a8' => __DIR__ . '/../..' . '/app/database/connect.php',
         'b66c52416caec3722dee0b2886d3b8a0' => __DIR__ . '/../..' . '/app/database/fetch.php',
+        'a91f3f2c842f6fe53bd2ae7a888c3e56' => __DIR__ . '/../..' . '/app/database/create.php',
         'bff70bc01b7c71cef73057424c7effe4' => __DIR__ . '/../..' . '/app/helpers/redirect.php',
         '659a1170bd85d900279ffa928b20fc45' => __DIR__ . '/../..' . '/app/helpers/flash.php',
         'bb2a4a499124d421b7b2244b64f744f0' => __DIR__ . '/../..' . '/app/helpers/sessions.php',
+        '573e7af461ecef5ee980f82bd822214f' => __DIR__ . '/../..' . '/app/helpers/validade.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'a' => 
         array (
             'app\\' => 4,
+        ),
+        'E' => 
+        array (
+            'Erikl\\SistemaPizzaria\\' => 22,
         ),
     );
 
@@ -29,10 +35,15 @@ class ComposerStaticInitd35f14259a2d1d5d7dcf3eceadec9f20
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Erikl\\SistemaPizzaria\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'app\\controllers\\Clients' => __DIR__ . '/../..' . '/app/controllers/Clients.php',
         'app\\controllers\\Dashboard' => __DIR__ . '/../..' . '/app/controllers/Dashboard.php',
         'app\\controllers\\FinalizeOrder' => __DIR__ . '/../..' . '/app/controllers/FinalizeOrder.php',
         'app\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',

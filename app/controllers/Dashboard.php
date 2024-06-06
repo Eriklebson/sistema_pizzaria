@@ -38,12 +38,6 @@ class Dashboard{
             'data' => ['title' => 'Pedidos Concluidos']
         ];
     }
-    public function clients($params){
-        return[
-            'view' => 'dashboard/clients.php',
-            'data' => ['title' => 'Clientes']
-        ];
-    }
     public function selfConfig($params){
         return[
             'view' => 'dashboard/selfConfig.php',

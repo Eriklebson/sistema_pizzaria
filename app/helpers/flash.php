@@ -1,5 +1,4 @@
 <?php 
-
 function setFlash($index, $message){
     if(!isset($_SESSION['flash'][$index])){
         $_SESSION['flash'][$index] = $message;

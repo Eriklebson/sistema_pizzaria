@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('#cep').mask('00000-000');
-    $('#tel').mask('(00) 0 0000-0000');
+    $('#phone').mask('(00) 0 0000-0000');
 
     //verificação de dark mode
     if(Cookies.get('dark-mode') == 'true'){

@@ -33,49 +33,49 @@
                 <hr>
                 <ul class="nav nav-pills flex-column mb-auto">
                     <li class="nav-item">
-                        <a href="/dashboard/1/" class="nav-link link-dark <?php if($title == 'Dashboard'){echo 'active';}?>" aria-current="page">
+                        <a href="/dashboard" class="nav-link link-dark <?php if($title == 'Dashboard'){echo 'active';}?>" aria-current="page">
                         <i class="fa-solid fa-house me-2"></i>
                         Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/category" class="nav-link link-dark <?php if($title == 'Categoria'){echo 'active';}?>">
+                        <a href="/dashboard/category" class="nav-link link-dark <?php if($title == 'Categoria'){echo 'active';}?>">
                         <i class="fa-solid fa-sitemap me-2"></i>
                         Categorias
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/products" class="nav-link link-dark <?php if($title == 'Produtos'){echo 'active';}?>">
+                        <a href="/dashboard/products" class="nav-link link-dark <?php if($title == 'Produtos'){echo 'active';}?>">
                         <i class="fa-solid fa-boxes-stacked me-2"></i>
                         Produtos
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/pendingOrders" class="nav-link link-dark <?php if($title == 'Pedidos Pendentes'){echo 'active';}?>">
+                        <a href="/dashboard/pendingOrders" class="nav-link link-dark <?php if($title == 'Pedidos Pendentes'){echo 'active';}?>">
                         <i class="fa-solid fa-clipboard-question me-2"></i>
                         Pedidos pendentes
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/paidOrders" class="nav-link link-dark <?php if($title == 'Pedidos Pagos'){echo 'active';}?>">
+                        <a href="/dashboard/paidOrders" class="nav-link link-dark <?php if($title == 'Pedidos Pagos'){echo 'active';}?>">
                         <i class="fa-solid fa-clipboard-list me-2"></i>
                         Pedidos pagos
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/completedOrders" class="nav-link link-dark <?php if($title == 'Pedidos Concluidos'){echo 'active';}?>">
+                        <a href="/dashboard/completedOrders" class="nav-link link-dark <?php if($title == 'Pedidos Concluidos'){echo 'active';}?>">
                         <i class="fa-solid fa-clipboard-check me-2"></i>
                         Pedidos concluidos
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/clients" class="nav-link link-dark <?php if($title == 'Clientes'){echo 'active';}?>">
+                        <a href="/dashboard/clients" class="nav-link link-dark <?php if($title == 'Clientes'){echo 'active';}?>">
                         <i class="fa-solid fa-users me-2"></i>
                         Clientes
                         </a>
                     </li>
                     <li>
-                        <a href="/dashboard/1/users" class="nav-link link-dark <?php if($title == 'Usuarios'){echo 'active';}?>">
+                        <a href="/dashboard/users" class="nav-link link-dark <?php if($title == 'Usuarios'){echo 'active';}?>">
                         <i class="fa-solid fa-id-card me-2"></i>
                         Usuarios
                         </a>
@@ -85,7 +85,7 @@
                 <div class="dropdown">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="<?=ASSETS?>/assets/img/perfil_standart.jpg" alt="" width="32" height="32" class="rounded-circle me-2">
-                        <strong>Admin</strong>
+                        <strong><?=user()->name?></strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                         <li><a class="dropdown-item" href="/dashboard/1/selfConfig">Configurações da Conta</a></li>

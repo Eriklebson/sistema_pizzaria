@@ -53,12 +53,23 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Peço</th>
-                    <th scope="col">Tipo</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Celular</th>
                     <th scope="col" class="text-center">Ações</th>
                 </tr>
             </thead>
             <tbody class="table-body">
+                <?php foreach($clients as $client){?>
+                <tr>
+                    <th scope="row"><?=$client->id?></th>
+                    <td><?=$client->name?></td>
+                    <td><?=$client->email?></td>
+                    <td><?=$client->phone?></td>
+                    <td class="text-center">
+                        <a href='editUser/<?=$client->id?>' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Usuario'><i class='fa-solid fa-pen-to-square'></i></a>
+                    </td>
+                <tr>
+                <?php }?>
             </tbody>
         </table>
     </div>

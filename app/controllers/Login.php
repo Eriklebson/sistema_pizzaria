@@ -5,7 +5,7 @@ class Login{
     public function index($params){
         return[
             'view' => 'login.php',
-            'data' => ['title' => 'login']
+            'data' => ['title' => 'Login']
         ];
     }
     public function login($params){
@@ -22,7 +22,7 @@ class Login{
             return setMessageAndRedirect('verify', 'Usuário ou senha estão incorretos', '/login');
         }
         $_SESSION['logged'] = $user;
-        return redirect('/dashboard/'.$user->id.'/');
+        return redirect('/dashboard');
     }
     public function destroy(){
         unset($_SESSION['logged']);

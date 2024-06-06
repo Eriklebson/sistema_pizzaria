@@ -59,7 +59,7 @@
             </div>
         </div>
     </nav>
-    <?php if($title != 'login' && $title != 'Comanda'){?>
+    <?php if($title != 'Login' && $title != 'Comanda' && $title != 'Registrar'){?>
     <header class="container-fluid text-center banner">
         <h1 class="mb-0"><i class="fa-solid fa-pizza-slice me-1 active title"></i>Pizza</h1>
         <small class="text-uppercase active fs-4">delicous</small>

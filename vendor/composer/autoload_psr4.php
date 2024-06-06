@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'app\\' => array($baseDir . '/app'),
+    'Erikl\\SistemaPizzaria\\' => array($baseDir . '/src'),
 );

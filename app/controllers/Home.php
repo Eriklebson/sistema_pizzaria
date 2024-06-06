@@ -32,5 +32,11 @@ class Home{
             'data' => ['title' => 'Comanda']
         ];
     }
+    public function register($params){
+        return[
+            'view' => 'register.php',
+            'data' => ['title' => 'Registrar']
+        ];
+    }
 }
 ?>

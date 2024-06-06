@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <a href="category">
+                <a href="dashboard/category">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-sitemap fs-0"></i>
                         <p class="fs-2 mt-2">Categorias</p>
@@ -10,7 +10,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="products">
+                <a href="dashboard/products">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                     <i class="fa-solid fa-boxes-stacked fs-0"></i>
                         <p class="fs-2 mt-2">Produtos</p>
@@ -18,7 +18,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="pendingOrders">
+                <a href="dashboard/pendingOrders">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-clipboard-question fs-0"></i>
                         <p class="fs-2 mt-2">Pedidos pendentes</p>
@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="paidOrders">
+                <a href="dashboard/paidOrders">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-clipboard-list fs-0"></i>
                         <p class="fs-2 mt-2">Pedidos pagos</p>
@@ -34,7 +34,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="completedOrders">
+                <a href="dashboard/completedOrders">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-clipboard-check fs-0"></i>
                         <p class="fs-2 mt-2">Pedidos concluidos</p>
@@ -42,7 +42,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="clients">
+                <a href="dashboard/clients">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-users fs-0"></i>
                         <p class="fs-2 mt-2">Clientes</p>
@@ -50,7 +50,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="users">
+                <a href="dashboard/users">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-id-card fs-0"></i>
                         <p class="fs-2 mt-2">Usuarios</p>
@@ -58,7 +58,7 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <a href="selfConfig">
+                <a href="dashboard/selfConfig">
                     <div class="card text-center p-5 m-3 item d-flex justify-content-center">
                         <i class="fa-solid fa-gears fs-0"></i>
                         <p class="fs-2 mt-2">Configurações</p>

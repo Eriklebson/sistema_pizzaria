@@ -1,25 +1,15 @@
 <?php
 namespace app\controllers;
 
-class Users{
+class Clients{
     public function index($params){
-        $users =  findAll('users where type_account != 3;');
+        $clients =  findAll('users where type_account = 3;');
         return[
-            'view' => 'dashboard/users.php',
-            'data' => ['title' => 'Usuarios', 'users' => $users]
+            'view' => 'dashboard/clients.php',
+            'data' => ['title' => 'Clientes', 'clients' => $clients]
         ];
     }
-    public function edit($params){
-        if(!isset($params['editUser'])){
-            return redirect("/dashboard/".$params['dashboard']."/");
-        }
-        $user = findBy('users', 'where id='.$params['editUser']);
-        return[
-            'view' => 'dashboard/editUser.php',
-            'data' => ['title' => 'Usuarios', 'user' => $user]
-        ];
-    }
-    public function storeCliente(){
+    public function store(){
         $validate = validade([
             'name' => 'required',
             'phone' => 'required|minlen:16|unique:users',
