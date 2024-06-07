@@ -69,7 +69,7 @@
                             if($user->type_account == 1){
                                 echo 'Admin';
                             } else if($user->type_account == 2){
-                                echo 'Standard';
+                                echo 'Funcionario';
                             }
                         ?>
                     </td>

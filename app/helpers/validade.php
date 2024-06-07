@@ -30,7 +30,9 @@ function multipleValidation($validade, $field, $param){
     }
     return $result;
 }
-
+function nullLabel($field){
+    return filter_input(INPUT_POST, $field, FILTER_UNSAFE_RAW);
+}
 function required($field){
     if($_POST[$field] === ''){
         setFlash($field, 'O campo é obrigatório');

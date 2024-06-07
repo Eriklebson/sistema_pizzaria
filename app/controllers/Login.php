@@ -21,7 +21,14 @@ class Login{
         if(!password_verify($password, $user->password)){
             return setMessageAndRedirect('verify', 'Usuário ou senha estão incorretos', '/login');
         }
+        $date = md5(date('d/m/Y H:i:s').$password);
+        $data = ['login_key' => password_hash($date, PASSWORD_DEFAULT)];
+        $update = update("users", $data, $user->id);
+        setcookie("login_key", $date, 0, '/');
         $_SESSION['logged'] = $user;
+        if(!$update){
+            return setMessageAndRedirect('verify', 'Ocorreu um erro na verificação por favor entre em contato com o suporte', '/login');
+        }
         return redirect('/dashboard');
     }
     public function destroy(){

@@ -37,10 +37,13 @@ function router(){
 
     $matcheUri = exactMatchUri($uri, $routes[$requestMethod]);
     $params = [];
+    if(str_contains($uri, 'dashboard')){
+        auth();
+    }
     if(empty($matcheUri)){
         $matcheUri = regularMatchUri($uri, $routes[$requestMethod]);
         $params = params($uri, $matcheUri);
-        $params = paramsFormat($uri, $params);   
+        $params = paramsFormat($uri, $params); 
     }
     if(!empty($matcheUri)){
         return controller($matcheUri, $params);

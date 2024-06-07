@@ -6,6 +6,8 @@ function create($table, $data){
         $sql.= implode(',', array_keys($data)).") values(";
         $sql.= ':'.implode(',:', array_keys($data)).")";
         $prepare = $connect->prepare($sql);
+        var_dump($prepare);
+        die();
         return $prepare->execute($data);
     }
     catch(PDOException $e){

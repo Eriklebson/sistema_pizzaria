@@ -26,7 +26,7 @@
                         <a href="/about" class="me-5 fw-semibold <?php if($title == 'Sobre'){echo 'active';}?>">Sobre</a>
                         <a href="/contact" class="me-5 fw-semibold <?php if($title == 'Contato'){echo 'active';}?>">Contato</a>
                         <?php if(logged()){?>
-                            <a href="/dashboard/<?php echo user()->id;?>/" class="me-5 fw-semibold">Painel De Controle</a>
+                            <a href="/dashboard" class="me-5 fw-semibold">Painel De Controle</a>
                         <?php } else{?>
                             <a href="/login" class="me-5 fw-semibold">Login</a>
                         <?php }?>

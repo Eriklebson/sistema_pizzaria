@@ -3,6 +3,7 @@ return [
     'POST' => [
         '/login' => 'Login@login',
         '/register' => 'Clients@store',
+        '/dashboard/update' => 'Users@update',
     ],
     'GET' => [
         //Site

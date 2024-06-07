@@ -38,48 +38,56 @@
                         Inicio
                         </a>
                     </li>
+                    <?php if(in_array(user()->type_account, [1])){?>
                     <li>
                         <a href="/dashboard/category" class="nav-link link-dark <?php if($title == 'Categoria'){echo 'active';}?>">
                         <i class="fa-solid fa-sitemap me-2"></i>
                         Categorias
                         </a>
                     </li>
+                    <?php }if(in_array(user()->type_account, [1, 2])){?>
                     <li>
                         <a href="/dashboard/products" class="nav-link link-dark <?php if($title == 'Produtos'){echo 'active';}?>">
                         <i class="fa-solid fa-boxes-stacked me-2"></i>
                         Produtos
                         </a>
                     </li>
+                    <?php }?>
                     <li>
                         <a href="/dashboard/pendingOrders" class="nav-link link-dark <?php if($title == 'Pedidos Pendentes'){echo 'active';}?>">
                         <i class="fa-solid fa-clipboard-question me-2"></i>
                         Pedidos pendentes
                         </a>
                     </li>
+                    <?php if(in_array(user()->type_account, [1, 2])){?>
                     <li>
                         <a href="/dashboard/paidOrders" class="nav-link link-dark <?php if($title == 'Pedidos Pagos'){echo 'active';}?>">
                         <i class="fa-solid fa-clipboard-list me-2"></i>
                         Pedidos pagos
                         </a>
                     </li>
+                    <?php }?>
                     <li>
                         <a href="/dashboard/completedOrders" class="nav-link link-dark <?php if($title == 'Pedidos Concluidos'){echo 'active';}?>">
                         <i class="fa-solid fa-clipboard-check me-2"></i>
                         Pedidos concluidos
                         </a>
                     </li>
+                    <?php if(in_array(user()->type_account, [1, 2])){?>
                     <li>
                         <a href="/dashboard/clients" class="nav-link link-dark <?php if($title == 'Clientes'){echo 'active';}?>">
                         <i class="fa-solid fa-users me-2"></i>
                         Clientes
                         </a>
                     </li>
+                    <?php }if(in_array(user()->type_account, [1])){?>
                     <li>
                         <a href="/dashboard/users" class="nav-link link-dark <?php if($title == 'Usuarios'){echo 'active';}?>">
                         <i class="fa-solid fa-id-card me-2"></i>
                         Usuarios
                         </a>
                     </li>
+                    <?php }?>
                 </ul>
                 <hr>
                 <div class="dropdown">
@@ -88,7 +96,7 @@
                         <strong><?=user()->name?></strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
-                        <li><a class="dropdown-item" href="/dashboard/1/selfConfig">Configurações da Conta</a></li>
+                        <li><a class="dropdown-item" href="/dashboard/selfConfig">Configurações da Conta</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="/logout">Sair</a></li>
                     </ul>

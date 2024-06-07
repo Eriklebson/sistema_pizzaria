@@ -13,10 +13,12 @@ class ComposerStaticInitd35f14259a2d1d5d7dcf3eceadec9f20
         '00e7ad15644ececae3594a86501bf5a8' => __DIR__ . '/../..' . '/app/database/connect.php',
         'b66c52416caec3722dee0b2886d3b8a0' => __DIR__ . '/../..' . '/app/database/fetch.php',
         'a91f3f2c842f6fe53bd2ae7a888c3e56' => __DIR__ . '/../..' . '/app/database/create.php',
+        '3df56a370550a770088401d1cdeb8b85' => __DIR__ . '/../..' . '/app/database/update.php',
         'bff70bc01b7c71cef73057424c7effe4' => __DIR__ . '/../..' . '/app/helpers/redirect.php',
         '659a1170bd85d900279ffa928b20fc45' => __DIR__ . '/../..' . '/app/helpers/flash.php',
         'bb2a4a499124d421b7b2244b64f744f0' => __DIR__ . '/../..' . '/app/helpers/sessions.php',
         '573e7af461ecef5ee980f82bd822214f' => __DIR__ . '/../..' . '/app/helpers/validade.php',
+        '87fc4a691bb30dc25808d77edd0a9485' => __DIR__ . '/../..' . '/app/helpers/auth.php',
     );
 
     public static $prefixLengthsPsr4 = array (

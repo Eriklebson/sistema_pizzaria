@@ -3,6 +3,7 @@ namespace app\controllers;
 
 class Clients{
     public function index($params){
+        permissions(user(), [1, 2]);
         $clients =  findAll('users where type_account = 3;');
         return[
             'view' => 'dashboard/clients.php',
