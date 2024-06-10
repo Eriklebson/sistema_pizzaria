@@ -13,16 +13,18 @@
     </div>
     <div class="card px-4 py-2 mb-3">
         <h3>Adicionar categoria:</h3>
-        <form id="addcategory">
+        <form action="/dashboard/addCategory" method="POST">
             <div class="row">
                 <div class="col-md-12 p-2">
-                    <input type="text" class="form-control" name="category" id="category" placeholder="Categoria" required>
-                    <p class="success text-success" style="display: none;">Cadastrado com sucesso</p>
-                    <p class="error text-danger" style="display: none;">Desculpe não foi possivel cadastrar a categoria, certifiquice de ja não ter cadastrado a mesma</p>
-                    <p class="input_null text-danger" style="display: none;">Preencha o campo acima</p>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Categoria">
+                    <div class="text-center">
+                    <?=getFlash('success', 'color: green;');?>
+                    <?=getFlash('error');?>
+                    <?=getFlash('name');?>
+                    </div>
                 </div>
                 <div class="col-md-12 p-2 text-end">
-                    <button type="submit" for="addcategory" class="btn btn-primary">Adicionar</button>
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
                 </div>
             </div>
         </form>
@@ -44,10 +46,19 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col">Quantidade de Produtos</th>
+                    <th scope="col" class="text-center">Açoes</th>
                 </tr>
             </thead>
             <tbody class="table-body">
+                <?php foreach($categorys as $category){?>
+                <tr>
+                    <th scope="row"><?=$category->id?></th>
+                    <td><?=$category->name?></td>
+                    <td class="text-center">
+                        <a href='editCategory/<?=$category->id?>' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Categoria'><i class='fa-solid fa-pen-to-square'></i></a>
+                    </td>
+                <tr>
+                <?php }?>
             </tbody>
         </table>
     </div>

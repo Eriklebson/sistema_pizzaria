@@ -1,9 +1,15 @@
 <?php 
 return [
     'POST' => [
+        //Site
         '/login' => 'Login@login',
         '/register' => 'Clients@store',
+
+        //painel de controle
         '/dashboard/update' => 'Users@update',
+        '/dashboard/addCategory' => 'Category@store',
+        '/dashboard/editCategory' => 'Category@update',
+        '/dashboard/addProduct' => 'Product@store',
     ],
     'GET' => [
         //Site
@@ -19,8 +25,10 @@ return [
 
         //Painel de controle
         '/dashboard'=> 'Dashboard@index',
-        '/dashboard/category'=> 'Dashboard@category',
-        '/dashboard/products'=> 'Dashboard@products',
+        '/dashboard/category'=> 'Category@index',
+        '/dashboard/editCategory/[0-9]+'=> 'Category@edit',
+        '/dashboard/products'=> 'Product@Index',
+        '/dashboard/addProduct'=> 'Product@addProduct',
         '/dashboard/paidOrders'=> 'Dashboard@paidOrders',
         '/dashboard/pendingOrders'=> 'Dashboard@pendingOrders',
         '/dashboard/completedOrders'=> 'Dashboard@completedOrders',

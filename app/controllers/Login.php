@@ -2,13 +2,13 @@
 namespace app\controllers;
 
 class Login{
-    public function index($params){
+    public function index(){
         return[
             'view' => 'login.php',
             'data' => ['title' => 'Login']
         ];
     }
-    public function login($params){
+    public function login(){
         $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
         $password = filter_input(INPUT_POST, 'password', FILTER_UNSAFE_RAW);
         if(empty($email) || empty($password)){

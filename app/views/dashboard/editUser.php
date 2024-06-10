@@ -12,8 +12,7 @@
 </div>
 <div class="card p-4">
     <div class="text-center">
-        <?=getFlash('error');?>
-        <?=getFlash('success', 'color: green;');?>
+        <?=getFlash('error');getFlash('success', 'color: green;');?>
     </div>
     <form action="/dashboard/update" method="POST">
         <div class="row">
@@ -54,9 +53,9 @@
                 <p class="input_null text-danger" style="display: none;">Tem campos vazios</p>
             </div>
             <div class="col-md-6 p-2 text-end">
-                <p class="text-muted">Criada em <?=date_create($user->created_at)->format('d/m/Y - h:i:s')?></p>
+                <p class="text-muted">Criada em <?=date_create($user->created_at)->format('d/m/Y - H:i:s')?></p>
                 <?php if(isset($user->updated_at)){?>
-                <p class="text-muted">Atualizado em <?=date_create($user->updated_at)->format('d/m/Y - h:i:s')?> por <?php 
+                <p class="text-muted">Atualizado em <?=date_create($user->updated_at)->format('d/m/Y - H:i:s')?> por <?php 
                     $userBy = findBy('users', 'where id='.$user->updated_by);
                     echo $userBy->name?>
                 </p>

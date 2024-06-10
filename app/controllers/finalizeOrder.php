@@ -2,7 +2,7 @@
 namespace app\controllers;
 
 class FinalizeOrder{
-    public function index($params){
+    public function index(){
         return[
             'view' => 'finalizeOrder.php',
             'data' => ['title' => 'Finalizar']

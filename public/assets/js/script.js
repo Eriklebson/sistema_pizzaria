@@ -1,6 +1,9 @@
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 $(document).ready(function(){
     $('#cep').mask('00000-000');
     $('#phone').mask('(00) 0 0000-0000');
+    $('#price').mask("#.##0,00", {reverse: true});
 
     //verificação de dark mode
     if(Cookies.get('dark-mode') == 'true'){

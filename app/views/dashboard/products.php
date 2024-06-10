@@ -4,7 +4,7 @@
             <h2>Produtos</h2>
         </div>
         <div class="col-md-6 d-flex justify-content-end">
-            <a href="addproduct" data-bs-toggle="tooltip" data-bs-title="Adicionar produto">
+            <a href="addProduct" data-bs-toggle="tooltip" data-bs-title="Adicionar produto">
                 <div class="back text-end mb-3 mx-3">
                     <i class="fa-solid fa-plus fs-3 px-3 py-2"></i>
                 </div>
@@ -59,6 +59,17 @@
                 </tr>
             </thead>
             <tbody class="table-body">
+                <?php foreach($products as $product){?>
+                <tr>
+                    <th scope="row"><?=$product->id?></th>
+                    <td><?=$product->name?></td>
+                    <td>R$ <?=number_format($product->price, 2, ',', '.');?></td>
+                    <td><?=$product->category?></td>
+                    <td class="text-center">
+                        <a href='editUser/<?=$product->id?>' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Produto'><i class='fa-solid fa-pen-to-square'></i></a>
+                    </td>
+                <tr>
+                <?php }?>
             </tbody>
         </table>
     </div>

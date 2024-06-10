@@ -2,7 +2,7 @@
 namespace app\controllers;
 
 class Users{
-    public function index($params){
+    public function index(){
         permissions(user(), [1]);
         $users =  findAll('users where type_account != 3;');
         return[
@@ -13,7 +13,7 @@ class Users{
     public function edit($params){
         permissions(user(), [1]);
         if(!isset($params['editUser'])){
-            return redirect("/dashboard/".$params['dashboard']."/");
+            return redirect("/dashboard/users/");
         }
         $user = findBy('users', 'where id='.$params['editUser']);
         return[
@@ -34,10 +34,10 @@ class Users{
         if(!$validate){
             return redirect('/register');
         }
-
         $validate['password'] = password_hash($validate['password'], PASSWORD_DEFAULT);
         array_splice_assoc($validate, 'password_conf', 1, array('type_account' => 3));
-        $created = create('users', $validate);
+        array_splice_assoc($validate, -1, 1, array('created_at' => date('Y-m-d H:m:s')));
+        $created = create('users', $validate)[0];
 
         if(!$created){
             setFlash('message', 'Ocorreu um erro ao cadastrar, tente novamente em alguns segundos');
@@ -80,10 +80,10 @@ class Users{
         array_splice_assoc($validate, -1, 1, array('updated_by' => user()->id));
         $update = update("users", $validate, $id);
         if(!$update){
-            return setMessageAndRedirect('error', 'Ocorreu um erro na atualização, tente novamente em alguns segundos', '/dashboard/editUser/'.filter_input(INPUT_POST, 'id', FILTER_UNSAFE_RAW));
+            return setMessageAndRedirect('error', 'Ocorreu um erro na atualização, tente novamente em alguns segundos', '/dashboard/editUser/'.$id);
         }
         $user = findBy("users", "where id=".user()->id);
-        return setMessageAndRedirect('success', 'Usuario Atualizado com sucesso', '/dashboard/editUser/'.filter_input(INPUT_POST, 'id', FILTER_UNSAFE_RAW));
+        return setMessageAndRedirect('success', 'Usuario Atualizado com sucesso', '/dashboard/editUser/'.$id);
     }
 }
 ?>

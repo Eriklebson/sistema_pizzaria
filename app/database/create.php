@@ -6,9 +6,9 @@ function create($table, $data){
         $sql.= implode(',', array_keys($data)).") values(";
         $sql.= ':'.implode(',:', array_keys($data)).")";
         $prepare = $connect->prepare($sql);
-        var_dump($prepare);
-        die();
-        return $prepare->execute($data);
+        $exec = $prepare->execute($data);
+        $lastRegister = $connect->lastInsertId();
+        return array($exec, $lastRegister);
     }
     catch(PDOException $e){
         var_dump($e->getMessage());
