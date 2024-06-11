@@ -13,7 +13,7 @@ class Users{
     public function edit($params){
         permissions(user(), [1]);
         if(!isset($params['editUser'])){
-            return redirect("/dashboard/users/");
+            return redirect("/dashboard/users");
         }
         $user = findBy('users', 'where id='.$params['editUser']);
         return[

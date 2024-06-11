@@ -59,3 +59,12 @@ $("#getPassword").click(function(){
     }
     document.getElementById('password').value = password
 });
+
+$('#photos').sortable({
+    update: function(){
+        var list = $(this).sortable('toArray');
+        $.post("../../php/orderImg.php", {imagens:list});
+
+        // POST to server using $.post or $.ajax
+    }
+});

@@ -14,11 +14,13 @@ class ComposerStaticInitd35f14259a2d1d5d7dcf3eceadec9f20
         'b66c52416caec3722dee0b2886d3b8a0' => __DIR__ . '/../..' . '/app/database/fetch.php',
         'a91f3f2c842f6fe53bd2ae7a888c3e56' => __DIR__ . '/../..' . '/app/database/create.php',
         '3df56a370550a770088401d1cdeb8b85' => __DIR__ . '/../..' . '/app/database/update.php',
+        '434437f2fdc60188323db38d8fe4a74c' => __DIR__ . '/../..' . '/app/database/delete.php',
         'bff70bc01b7c71cef73057424c7effe4' => __DIR__ . '/../..' . '/app/helpers/redirect.php',
         '659a1170bd85d900279ffa928b20fc45' => __DIR__ . '/../..' . '/app/helpers/flash.php',
         'bb2a4a499124d421b7b2244b64f744f0' => __DIR__ . '/../..' . '/app/helpers/sessions.php',
         '573e7af461ecef5ee980f82bd822214f' => __DIR__ . '/../..' . '/app/helpers/validade.php',
         '87fc4a691bb30dc25808d77edd0a9485' => __DIR__ . '/../..' . '/app/helpers/auth.php',
+        '1fe9f07a4c99678c5ad8b8ff6e3b106f' => __DIR__ . '/../..' . '/app/helpers/pagination.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -45,10 +47,12 @@ class ComposerStaticInitd35f14259a2d1d5d7dcf3eceadec9f20
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'app\\controllers\\Category' => __DIR__ . '/../..' . '/app/controllers/Category.php',
         'app\\controllers\\Clients' => __DIR__ . '/../..' . '/app/controllers/Clients.php',
         'app\\controllers\\Dashboard' => __DIR__ . '/../..' . '/app/controllers/Dashboard.php',
         'app\\controllers\\FinalizeOrder' => __DIR__ . '/../..' . '/app/controllers/FinalizeOrder.php',
         'app\\controllers\\Home' => __DIR__ . '/../..' . '/app/controllers/Home.php',
+        'app\\controllers\\Image' => __DIR__ . '/../..' . '/app/controllers/Image.php',
         'app\\controllers\\Login' => __DIR__ . '/../..' . '/app/controllers/Login.php',
         'app\\controllers\\Product' => __DIR__ . '/../..' . '/app/controllers/Product.php',
         'app\\controllers\\Users' => __DIR__ . '/../..' . '/app/controllers/Users.php',

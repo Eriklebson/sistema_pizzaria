@@ -79,3 +79,9 @@ body{
     margin-left: 0px !important;
     margin-right: 0px !important;
 }
+
+.close{
+    top: -15px;
+    right: -10px;
+    position: absolute;
+}

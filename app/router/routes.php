@@ -10,6 +10,9 @@ return [
         '/dashboard/addCategory' => 'Category@store',
         '/dashboard/editCategory' => 'Category@update',
         '/dashboard/addProduct' => 'Product@store',
+        '/dashboard/editProduct'=> 'Product@update',
+        '/dashboard/deleteImg/[0-9]+'=> 'Image@delete',
+        '/dashboard/addImage' => 'Image@upload',
     ],
     'GET' => [
         //Site
@@ -29,6 +32,8 @@ return [
         '/dashboard/editCategory/[0-9]+'=> 'Category@edit',
         '/dashboard/products'=> 'Product@Index',
         '/dashboard/addProduct'=> 'Product@addProduct',
+        '/dashboard/editProduct/[0-9]+'=> 'Product@editProduct',
+        '/dashboard/editProductImg/[0-9]+'=> 'Image@editProductImg',
         '/dashboard/paidOrders'=> 'Dashboard@paidOrders',
         '/dashboard/pendingOrders'=> 'Dashboard@pendingOrders',
         '/dashboard/completedOrders'=> 'Dashboard@completedOrders',

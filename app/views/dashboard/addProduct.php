@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-12 p-2">
                 <input type="text" class="form-control" name="name" id="name" placeholder="Titulo" require>
-                <?=getFlash('title');?>
+                <?=getFlash('name');?>
             </div>
             <div class="col-md-12 p-2">
                 <div class="input-group mb-3">

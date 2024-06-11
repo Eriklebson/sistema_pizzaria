@@ -110,6 +110,7 @@
     <script src="https://kit.fontawesome.com/e5340aea14.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="<?=ASSETS?>/assets/js/jquery.mask.js"></script>
     <script src="<?=ASSETS?>/assets/js/script.js"></script>
     <script src="<?=ASSETS?>/assets/js/apiCEP.js"></script>

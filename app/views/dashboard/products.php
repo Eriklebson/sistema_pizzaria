@@ -41,13 +41,10 @@
         </div>
     </div>
     <div class="card p-4">
-        <?php if (isset($_GET['msg'])) {
-            if ($_GET['msg'] == 'true') { ?>
-                <p class="text-success text-center fs-4">Produto cadastrado com sucesso</p>
-            <?php } else { ?>
-                <p class="text-danger text-center fs-4">Não foi possivel cadastrado o Produto</p>
-        <?php }
-        } ?>
+        <div class="text-center">
+            <?=getFlash('success', 'color: green;');?>
+            <?=getFlash('error');?>
+        </div>
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -66,11 +63,35 @@
                     <td>R$ <?=number_format($product->price, 2, ',', '.');?></td>
                     <td><?=$product->category?></td>
                     <td class="text-center">
-                        <a href='editUser/<?=$product->id?>' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Produto'><i class='fa-solid fa-pen-to-square'></i></a>
+                        <a href='editProduct/<?=$product->id?>' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Produto'><i class='fa-solid fa-pen-to-square'></i></a>
+                        <a href='editProductImg/<?=$product->id?>' class='btn btn-primary' class='btn btn-primary' data-bs-toggle='tooltip' data-bs-title='Editar Imagens'><i class='fa-solid fa-images'></i></a>
                     </td>
                 <tr>
                 <?php }?>
             </tbody>
         </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center mt-3">
+                <li class="page-item">
+                <a class="page-link" href="?pg=1" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+                </li>
+                <?php if($page != 1){?>
+                <li class="page-item"><a class="page-link disabled" href="#" aria-disabled="true">...</a></li>
+                <li class="page-item"><a class="page-link" href="?pg=<?=$page-1?>"><?=$page-1?></a></li>
+                <?php }?>
+                <li class="page-item"><a class="page-link active fw-bold" href="#"><?=$page?></a></li>
+                <?php if($page != $amount){?>
+                <li class="page-item"><a class="page-link" href="?pg=<?=$page+1?>"><?=$page+1?></a></li>
+                <li class="page-item"><a class="page-link disabled" href="#" aria-disabled="true">...</a></li>
+                <?php }?>
+                <li class="page-item">
+                <a class="page-link" href="?pg=<?=$amount?>" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </section>

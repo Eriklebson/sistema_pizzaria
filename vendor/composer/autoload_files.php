@@ -13,9 +13,11 @@ return array(
     'b66c52416caec3722dee0b2886d3b8a0' => $baseDir . '/app/database/fetch.php',
     'a91f3f2c842f6fe53bd2ae7a888c3e56' => $baseDir . '/app/database/create.php',
     '3df56a370550a770088401d1cdeb8b85' => $baseDir . '/app/database/update.php',
+    '434437f2fdc60188323db38d8fe4a74c' => $baseDir . '/app/database/delete.php',
     'bff70bc01b7c71cef73057424c7effe4' => $baseDir . '/app/helpers/redirect.php',
     '659a1170bd85d900279ffa928b20fc45' => $baseDir . '/app/helpers/flash.php',
     'bb2a4a499124d421b7b2244b64f744f0' => $baseDir . '/app/helpers/sessions.php',
     '573e7af461ecef5ee980f82bd822214f' => $baseDir . '/app/helpers/validade.php',
     '87fc4a691bb30dc25808d77edd0a9485' => $baseDir . '/app/helpers/auth.php',
+    '1fe9f07a4c99678c5ad8b8ff6e3b106f' => $baseDir . '/app/helpers/pagination.php',
 );

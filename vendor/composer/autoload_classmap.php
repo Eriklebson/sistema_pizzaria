@@ -7,10 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'app\\controllers\\Category' => $baseDir . '/app/controllers/Category.php',
     'app\\controllers\\Clients' => $baseDir . '/app/controllers/Clients.php',
     'app\\controllers\\Dashboard' => $baseDir . '/app/controllers/Dashboard.php',
     'app\\controllers\\FinalizeOrder' => $baseDir . '/app/controllers/FinalizeOrder.php',
     'app\\controllers\\Home' => $baseDir . '/app/controllers/Home.php',
+    'app\\controllers\\Image' => $baseDir . '/app/controllers/Image.php',
     'app\\controllers\\Login' => $baseDir . '/app/controllers/Login.php',
     'app\\controllers\\Product' => $baseDir . '/app/controllers/Product.php',
     'app\\controllers\\Users' => $baseDir . '/app/controllers/Users.php',
